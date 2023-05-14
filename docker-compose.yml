@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-      - '3001:5432'
+      - '5432:5432'
   pgadmin:
     # connect with host: postgres, port: 5432
     image: dpage/pgadmin4
@@ -21,7 +21,7 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     ports:
-      - "3002:80"
+      - "3001:80"
 volumes:
   postgres:
   pgadmin-data:
